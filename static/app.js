@@ -5,7 +5,7 @@ $('form input[type="file"]').change(event => {
   } else {
       if(arquivos[0].type == 'image/jpeg') {
         $('img').remove();
-        let imagem = $('<img class="img-fluid">');
+        let imagem = $('<img class="img-responsive">');
         imagem.attr('src', window.URL.createObjectURL(arquivos[0]));
         $('figure').prepend(imagem);
       } else {
